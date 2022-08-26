@@ -1,0 +1,158 @@
+$titles:'Heebo', sans-serif;
+
+
+section{
+display: flex;
+flex-direction: row-reverse;
+height: 650px;
+
+&{
+    background-image: linear-gradient(to left,rgba(255,255,255,1)70%, #3b41c5 0%, #a981bb 49%, #ffc8a9 100% 30%)!important;
+    margin-top:-3px;
+   
+}
+
+    .cards{
+    flex-basis: 35%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .card1{
+        border-radius: 15px 15px 15px 15px;
+        width: 350px;
+        height: 180px;
+        
+        margin-left: 100px;
+        margin-top: 70px;
+        background-image: linear-gradient(-225deg, #FF3CAC 0%, #562B7C 52%, #2B86C5 100%);
+        -webkit-box-shadow: 7px 14px 39px -4px rgba(0,0,0,0.75);
+       -moz-box-shadow: 7px 14px 39px -4px rgba(0,0,0,0.75);
+        box-shadow: 7px 14px 39px -4px rgba(0,0,0,0.75);
+
+        .visa{
+            margin-left: 20px;
+            margin-top: 15px;
+        }
+        div{
+           
+            display: flex;
+            flex-direction: column;
+            margin-left: 25px;
+           
+
+
+            h3{
+                color: #fff;
+            }
+            p{
+                color: #fff;
+            }
+        }
+
+
+    }
+    .card2{
+        border-radius: 15px 15px 15px 15px;
+        width: 300px;
+        height: 170px;
+        -webkit-box-shadow: 7px 14px 39px -4px rgba(0,0,0,0.75);
+        -moz-box-shadow: 7px 14px 39px -4px rgba(0,0,0,0.75);
+        box-shadow: 7px 14px 39px -4px rgba(0,0,0,0.75);
+        margin-left: 210px;
+        margin-top: 30px;
+        background-image: linear-gradient(to top, lightgrey 0%, lightgrey 1%, #e0e0e0 26%, #efefef 48%, #d9d9d9 75%, #bcbcbc 100%);
+        z-index: 2;
+
+        .blackLine{
+            height: 40px;
+            width: 100%;
+            background-color: #1a1a1a;
+            margin-top: 20px;
+        }
+
+        .line{
+            background-color: #c5c4c4;
+            border-radius: 5px 5px 5px 5px;
+            width: 250px;
+            height: 30px;
+            margin-left: 25px;
+            margin-top: 20px;
+            display: flex;
+            justify-content: right;
+             
+
+            h3{
+                color: #fff;
+                margin-top: 8px;
+                margin-right: 20px;
+                font-family:Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 11px;
+            }
+        }
+
+
+    }
+  }
+   
+  
+  .infoArticle{
+      flex-basis: 65%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      
+      h2{
+       font-family: $titles;
+       text-transform: uppercase;
+       color: hsl(278, 68%, 11%);
+       font-size: 35px;
+       font-weight: 600;
+       margin-bottom: 40px;
+      }
+        .mb-3{
+
+            label{
+                font-family: $titles;
+                text-transform: uppercase;
+                color: hsl(278, 68%, 11%);
+                font-size: 14px;
+                font-weight: 600;
+            }
+
+           .form-control{
+                width: 220px;
+            }
+            #dmInput{
+                width: 100px;
+                margin-right: 20px;
+            }
+            #cvvInput{
+                width: 100px;
+            }
+        }
+        label{
+            font-family: $titles;
+            text-transform: uppercase;
+            color: hsl(278, 68%, 11%);
+            font-size: 14px;
+            font-weight: 600;
+            
+        }
+        #dates{
+            display: flex;
+            flex-direction: row;
+          
+            
+           
+        }
+        .btn {
+            width: 220px;
+            background-color:hsl(278, 68%, 11%) ;
+            color: #fff;
+        }
+    }
+   
+}
+
