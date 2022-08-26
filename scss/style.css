@@ -1,4 +1,10 @@
-section {
+body {
+  background-image: -webkit-gradient(linear, right top, left top, color-stop(70%, white), color-stop(0%, #3b41c5), color-stop(49%, #a981bb), to(#ffc8a9)) !important;
+  background-image: linear-gradient(to left, white 70%, #3b41c5 0%, #a981bb 49%, #ffc8a9 100% 30%) !important;
+  margin-top: -3px;
+}
+
+body section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -9,13 +15,7 @@ section {
   height: 650px;
 }
 
-section {
-  background-image: -webkit-gradient(linear, right top, left top, color-stop(70%, white), color-stop(0%, #3b41c5), color-stop(49%, #a981bb), to(#ffc8a9)) !important;
-  background-image: linear-gradient(to left, white 70%, #3b41c5 0%, #a981bb 49%, #ffc8a9 100% 30%) !important;
-  margin-top: -3px;
-}
-
-section .cards {
+body section .cards {
   -ms-flex-preferred-size: 35%;
       flex-basis: 35%;
   display: -webkit-box;
@@ -27,7 +27,7 @@ section .cards {
           flex-direction: column;
 }
 
-section .cards .card1 {
+body section .cards .card1 {
   border-radius: 15px 15px 15px 15px;
   width: 350px;
   height: 180px;
@@ -38,12 +38,12 @@ section .cards .card1 {
   box-shadow: 7px 14px 39px -4px rgba(0, 0, 0, 0.75);
 }
 
-section .cards .card1 .visa {
+body section .cards .card1 .visa {
   margin-left: 20px;
   margin-top: 15px;
 }
 
-section .cards .card1 div {
+body section .cards .card1 div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -54,15 +54,15 @@ section .cards .card1 div {
   margin-left: 25px;
 }
 
-section .cards .card1 div h3 {
+body section .cards .card1 div h3 {
   color: #fff;
 }
 
-section .cards .card1 div p {
+body section .cards .card1 div p {
   color: #fff;
 }
 
-section .cards .card2 {
+body section .cards .card2 {
   border-radius: 15px 15px 15px 15px;
   width: 300px;
   height: 170px;
@@ -75,14 +75,14 @@ section .cards .card2 {
   z-index: 2;
 }
 
-section .cards .card2 .blackLine {
+body section .cards .card2 .blackLine {
   height: 40px;
   width: 100%;
   background-color: #1a1a1a;
   margin-top: 20px;
 }
 
-section .cards .card2 .line {
+body section .cards .card2 .line {
   background-color: #c5c4c4;
   border-radius: 5px 5px 5px 5px;
   width: 250px;
@@ -97,7 +97,7 @@ section .cards .card2 .line {
           justify-content: right;
 }
 
-section .cards .card2 .line h3 {
+body section .cards .card2 .line h3 {
   color: #fff;
   margin-top: 8px;
   margin-right: 20px;
@@ -105,7 +105,7 @@ section .cards .card2 .line h3 {
   font-size: 11px;
 }
 
-section .infoArticle {
+body section .infoArticle {
   -ms-flex-preferred-size: 65%;
       flex-basis: 65%;
   display: -webkit-box;
@@ -123,7 +123,7 @@ section .infoArticle {
           flex-direction: column;
 }
 
-section .infoArticle h2 {
+body section .infoArticle h2 {
   font-family: "Heebo", sans-serif;
   text-transform: uppercase;
   color: #21092f;
@@ -132,7 +132,7 @@ section .infoArticle h2 {
   margin-bottom: 40px;
 }
 
-section .infoArticle .mb-3 label {
+body section .infoArticle .mb-3 label {
   font-family: "Heebo", sans-serif;
   text-transform: uppercase;
   color: #21092f;
@@ -140,20 +140,20 @@ section .infoArticle .mb-3 label {
   font-weight: 600;
 }
 
-section .infoArticle .mb-3 .form-control {
+body section .infoArticle .mb-3 .form-control {
   width: 220px;
 }
 
-section .infoArticle .mb-3 #dmInput {
+body section .infoArticle .mb-3 #dmInput {
   width: 100px;
   margin-right: 20px;
 }
 
-section .infoArticle .mb-3 #cvvInput {
+body section .infoArticle .mb-3 #cvvInput {
   width: 100px;
 }
 
-section .infoArticle label {
+body section .infoArticle label {
   font-family: "Heebo", sans-serif;
   text-transform: uppercase;
   color: #21092f;
@@ -161,7 +161,7 @@ section .infoArticle label {
   font-weight: 600;
 }
 
-section .infoArticle #dates {
+body section .infoArticle #dates {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -171,57 +171,57 @@ section .infoArticle #dates {
           flex-direction: row;
 }
 
-section .infoArticle .btn {
+body section .infoArticle .btn {
   width: 220px;
   background-color: #21092f;
   color: #fff;
 }
 
 @media (max-width: 768px) {
-  section {
+  body {
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(70%, white), color-stop(0%, #3b41c5), color-stop(49%, #a981bb), to(#ffc8a9)) !important;
+    background-image: linear-gradient(to top, white 70%, #3b41c5 0%, #a981bb 49%, #ffc8a9 100% 30%) !important;
+    margin-top: -3px;
+  }
+  body section {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
   }
-  section {
-    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(70%, white), color-stop(0%, #3b41c5), color-stop(49%, #a981bb), to(#ffc8a9)) !important;
-    background-image: linear-gradient(to top, white 70%, #3b41c5 0%, #a981bb 49%, #ffc8a9 100% 30%) !important;
-    margin-top: -3px;
-  }
-  section .cards {
+  body section .cards {
     -ms-flex-preferred-size: 5%;
         flex-basis: 5%;
     max-width: 700px;
   }
-  section .cards .card1 {
+  body section .cards .card1 {
     width: 200px;
     height: 120px;
     margin-top: 120px;
     margin-left: 10px;
   }
-  section .cards .card1 .visa {
+  body section .cards .card1 .visa {
     height: 20px;
     width: 50px;
   }
-  section .cards .card1 h3 {
+  body section .cards .card1 h3 {
     font-size: 13px;
   }
-  section .cards .card1 p {
+  body section .cards .card1 p {
     font-size: 11px;
   }
-  section .cards .card2 {
+  body section .cards .card2 {
     width: 200px;
     height: 120px;
     margin-left: 100px;
   }
-  section .cards .card2 .blackLine {
+  body section .cards .card2 .blackLine {
     height: 10px;
     width: 100%;
     background-color: #1a1a1a;
     margin-top: 5px;
   }
-  section .cards .card2 .line {
+  body section .cards .card2 .line {
     width: 100%;
     height: 13px;
     margin-left: 1px;
