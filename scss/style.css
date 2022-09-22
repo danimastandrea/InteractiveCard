@@ -177,7 +177,11 @@ body section .infoArticle .btn {
   color: #fff;
 }
 
-@media (max-width: 768px) {
+body section .infoArticle #msg {
+  display: none;
+}
+
+@media (max-width: 950px) {
   body {
     background-image: -webkit-gradient(linear, left bottom, left top, color-stop(70%, white), color-stop(0%, #3b41c5), color-stop(49%, #a981bb), to(#ffc8a9)) !important;
     background-image: linear-gradient(to top, white 70%, #3b41c5 0%, #a981bb 49%, #ffc8a9 100% 30%) !important;
@@ -189,10 +193,23 @@ body section .infoArticle .btn {
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
   }
+  body section .infoArticle {
+    padding-top: 60px;
+    margin: auto;
+  }
   body section .cards {
     -ms-flex-preferred-size: 5%;
         flex-basis: 5%;
     max-width: 700px;
+    padding-top: 60px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin: auto;
   }
   body section .cards .card1 {
     width: 200px;
@@ -213,13 +230,13 @@ body section .infoArticle .btn {
   body section .cards .card2 {
     width: 200px;
     height: 120px;
-    margin-left: 100px;
+    margin-left: 15px;
   }
   body section .cards .card2 .blackLine {
     height: 10px;
     width: 100%;
     background-color: #1a1a1a;
-    margin-top: 5px;
+    margin-top: 15px;
   }
   body section .cards .card2 .line {
     width: 100%;

@@ -104,6 +104,7 @@ height: 650px;
       align-items: center;
       flex-direction: column;
       
+      
       h2{
        font-family: $titles;
        text-transform: uppercase;
@@ -153,11 +154,14 @@ height: 650px;
             background-color:hsl(278, 68%, 11%) ;
             color: #fff;
         }
+        #msg{
+            display:none;
+        }
     }
    
 }
 }
-@media (max-width: 768px){
+@media (max-width: 950px){
     body{
         &{
             background-image: linear-gradient(to top,rgba(255,255,255,1)70%, #3b41c5 0%, #a981bb 49%, #ffc8a9 100% 30%)!important;
@@ -167,19 +171,24 @@ height: 650px;
   
     section{
         flex-direction: column-reverse;
-       
+       .infoArticle{
+        padding-top: 60px;
+        margin: auto;
+       }
         .cards{
             flex-basis: 5%;
             max-width: 700px;
-            
-            
-           
+            padding-top: 60px;
+            align-items: center;
+            flex-direction: row;
+           margin: auto;
            
             .card1{
                 width: 200px;
                 height: 120px;
                 margin-top: 120px;
                 margin-left: 10px;
+               
                 .visa{
                     height: 20px;
                     width: 50px;
@@ -194,14 +203,14 @@ height: 650px;
             .card2{
                 width: 200px;
                 height: 120px;
-               
-                margin-left: 100px;
+               margin-left: 15px;
+                
                 
                 .blackLine{
                     height: 10px;
                     width: 100%;
                     background-color: #1a1a1a;
-                    margin-top: 5px;
+                    margin-top: 15px;
                 }
         
                 .line{
