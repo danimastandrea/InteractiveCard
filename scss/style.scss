@@ -10,7 +10,7 @@ body{
 section{
 display: flex;
 flex-direction: row-reverse;
-height: 650px;
+min-height: 650px;
 
 
 
@@ -171,23 +171,30 @@ height: 650px;
   
     section{
         flex-direction: column-reverse;
+        min-height: 400px;
        .infoArticle{
         padding-top: 60px;
-        margin: auto;
+        margin: 0;
+        max-width: 400px;
+      
+            h2{
+                font-size: 25px!important;
+            }
+        
        }
         .cards{
             flex-basis: 5%;
             max-width: 700px;
-            padding-top: 60px;
+           
             align-items: center;
-            flex-direction: row;
-           margin: auto;
+            flex-direction: column;
+           margin: 0;
            
             .card1{
                 width: 200px;
                 height: 120px;
-                margin-top: 120px;
-                margin-left: 10px;
+                margin-top: 50px;
+                margin-left: 0px;
                
                 .visa{
                     height: 20px;
@@ -203,7 +210,7 @@ height: 650px;
             .card2{
                 width: 200px;
                 height: 120px;
-               margin-left: 15px;
+               margin-left: 0px;
                 
                 
                 .blackLine{
