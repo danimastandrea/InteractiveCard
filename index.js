@@ -4,6 +4,7 @@
    cardNumber.addEventListener("change", mostrar)
    dmInput.addEventListener("change", mostrar)
 
+   // Function to reflect the user inputs in the card
 function mostrar(){
     let nameVar= document.getElementById('cardName').value;
     
@@ -23,18 +24,21 @@ function mostrar(){
 
    }
 
+// function to show a confirmation message
 function enviado (){
  document.getElementById('msg').style.display= 'block';
 
 }
-  
+ 
+
+// Function to validate form inputs
 function validateForm() {
    // Get the values from the input fields
-   var cardName = document.getElementById("cardName").value;
-   var cardNumber = document.getElementById("cardNumber").value;
-   var expDate = document.getElementById("dmInput").value;
-   var cvv = document.getElementById("cvvInput").value;
- 
+   let cardName = document.getElementById("cardName").value;
+   let cardNumber = document.getElementById("cardNumber").value;
+   let expDate = document.getElementById("dmInput").value;
+   let cvv = document.getElementById("cvvInput").value;
+  
    // Check if the card holder name is not empty
    if (cardName == "") {
      alert("Please enter your name");
@@ -58,8 +62,10 @@ function validateForm() {
      alert("Please enter a valid CVV code");
      return false;
    }
+   
  
    // If all the validation checks pass, return true to submit the form
-   return true;
+   return enviado() ;
+   
  }
  

@@ -37,18 +37,17 @@
 
     <div class="mb-3">
       <label for="exampleFormControlInput1" class="form-label">Card number</label>
-      <input type="number" max="16" class="form-control" id="cardNumber" placeholder="0123456"  required >
+      <input type="number"  class="form-control" id="cardNumber" placeholder="0123456"  required >
     </div>
   
     <label for="exampleFormControlInput1" class="form-label">Exp Date</label>
     
     <div class="mb-3" id="dates">
-      <input type="number"  class="form-control" id="dmInput" placeholder="dd/mm"  required>
-      <input type="number" class="form-control" id="cvvInput" placeholder="cvv"  required max="3" min="3">
+      <input type=""  class="form-control" id="dmInput" placeholder="dd/mm"  required>
+      <input type="number" class="form-control" id="cvvInput" placeholder="cvv"  required >
     </div>
 
-    <button type="submit" onclick="enviado()" class="btn " id="btn">CONFIRM
-    </button>
+    <button type="submit" onclick="return validateForm()" class="btn" id="btn">CONFIRM</button>
 
     <div class="alert alert-success" role="alert" id="msg">
      CARD ADDED CORRECTLY
