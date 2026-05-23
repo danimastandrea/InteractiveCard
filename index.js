@@ -1,61 +1,190 @@
-// Cache the DOM elements
-const cardNameEl = document.getElementById('cardName');
-const cardNumberEl = document.getElementById('cardNumber');
-const dmInputEl = document.getElementById('dmInput');
-const cvvInputEl = document.getElementById('cvvInput');
-const nameDisplay = document.getElementById('name');
-const numberDisplay = document.getElementById('number');
-const ddmmDisplay = document.getElementById('ddmm');
-const cvvDisplay = document.getElementById('cvv');
+// FORM
 
-// Add event listeners for the inputs
-[cardNameEl, cardNumberEl, dmInputEl, cvvInputEl].forEach(el => {
-    el.addEventListener("input", mostrar);
-});
+const form =
+  document.getElementById('Form');
 
-// Function to reflect user inputs in the card
-function mostrar() {
-    nameDisplay.innerHTML = cardNameEl.value;
-    numberDisplay.innerHTML = cardNumberEl.value;
-    ddmmDisplay.innerHTML = dmInputEl.value;
-    cvvDisplay.innerHTML = cvvInputEl.value;
-}
+// INPUTS
 
-// Function to show a confirmation message
-function enviado() {
-    document.getElementById('msg').style.display = 'block';
-}
+const cardNameInput =
+  document.getElementById('cardName');
 
-// Function to validate form inputs
+const cardNumberInput =
+  document.getElementById('cardNumber');
+
+const dateInput =
+  document.getElementById('dmInput');
+
+const cvvInput =
+  document.getElementById('cvvInput');
+
+// CARD ELEMENTS
+
+const cardNameText =
+  document.getElementById('name');
+
+const cardNumberText =
+  document.getElementById('number');
+
+const cardDateText =
+  document.getElementById('ddmm');
+
+const cardCVVText =
+  document.getElementById('cvv');
+
+// SUCCESS MESSAGE
+
+const successMessage =
+  document.getElementById('msg');
+
+// DEFAULT VALUES
+
+const defaults = {
+  name: 'Jane Appleseed',
+  number: '0000 0000 0000 0000',
+  date: '00/00',
+  cvv: '000'
+};
+
+// UPDATE NAME
+
+cardNameInput.addEventListener(
+  'input',
+  () => {
+
+    cardNameText.textContent =
+      cardNameInput.value ||
+      defaults.name;
+  }
+);
+
+// UPDATE CARD NUMBER
+
+cardNumberInput.addEventListener(
+  'input',
+  () => {
+
+    let value =
+      cardNumberInput.value
+        .replace(/\D/g, '')
+        .substring(0, 16);
+
+    value =
+      value.replace(/(.{4})/g, '$1 ')
+        .trim();
+
+    cardNumberInput.value = value;
+
+    cardNumberText.textContent =
+      value || defaults.number;
+  }
+);
+
+// UPDATE DATE
+
+dateInput.addEventListener(
+  'input',
+  () => {
+
+    let value =
+      dateInput.value
+        .replace(/\D/g, '')
+        .substring(0, 4);
+
+    if (value.length >= 3) {
+
+      value =
+        value.substring(0, 2) +
+        '/' +
+        value.substring(2);
+    }
+
+    dateInput.value = value;
+
+    cardDateText.textContent =
+      value || defaults.date;
+  }
+);
+
+// UPDATE CVV
+
+cvvInput.addEventListener(
+  'input',
+  () => {
+
+    let value =
+      cvvInput.value
+        .replace(/\D/g, '')
+        .substring(0, 3);
+
+    cvvInput.value = value;
+
+    cardCVVText.textContent =
+      value || defaults.cvv;
+  }
+);
+
+// VALIDATION
+
 function validateForm() {
-    // Get the values from the input fields
-    const cardName = cardNameEl.value;
-    const cardNumber = cardNumberEl.value;
-    const expDate = dmInputEl.value;
-    const cvv = cvvInputEl.value;
 
-    // Validation checks
-    if (!cardName) {
-        alert("Please enter your name");
-        return false;
-    }
+  const name =
+    cardNameInput.value.trim();
 
-    if (!/^\d{16}$/.test(cardNumber)) {
-        alert("Please enter a valid 16-digit card number");
-        return false;
-    }
+  const number =
+    cardNumberInput.value
+      .replace(/\s/g, '');
 
-    if (!/^\d{2}\/\d{2}$/.test(expDate)) {
-        alert("Please enter a valid expiration date in the format 'dd/mm'");
-        return false;
-    }
+  const date =
+    dateInput.value.trim();
 
-    if (!/^\d{3}$/.test(cvv)) {
-        alert("Please enter a valid 3-digit CVV code");
-        return false;
-    }
+  const cvv =
+    cvvInput.value.trim();
 
-    // If all validations pass, show the confirmation message
-    enviado();
-    return true;
+  if (!name) {
+    return 'Please enter card holder name';
+  }
+
+  if (!/^\d{16}$/.test(number)) {
+    return 'Card number must contain 16 digits';
+  }
+
+  if (!/^\d{2}\/\d{2}$/.test(date)) {
+    return 'Expiration date must be MM/YY';
+  }
+
+  if (!/^\d{3}$/.test(cvv)) {
+    return 'CVV must contain 3 digits';
+  }
+
+  return null;
 }
+
+// SUBMIT
+
+form.addEventListener(
+  'submit',
+  e => {
+
+    e.preventDefault();
+
+    const error =
+      validateForm();
+
+    if (error) {
+
+      alert(error);
+
+      return;
+    }
+
+    successMessage.style.display =
+      'block';
+
+    setTimeout(() => {
+
+      successMessage.style.display =
+        'none';
+
+    }, 3000);
+  }
+);
